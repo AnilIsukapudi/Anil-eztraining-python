@@ -1,0 +1,98 @@
+>>>exception handling
+ex:
+a=10
+b=0
+try:
+    print(a/b)
+except:
+    print('this is except block')
+print('end of program')
+o/p:
+this is except block
+end of program
+ex:2
+a=10
+try:
+    b=int(input('enter number:'))
+    print('resource open')
+    print(a/b)
+except ZeroDivisionError as e:
+    print('please note ,number cant be divided by zero',e)
+except ValueError as e:
+    print('invalid input',e)
+except Exception as e:
+    print('other error',e)
+finally:
+    print('end of program')
+o/p:
+enter number:#
+invalid input invalid literal for int() with base 10: '#'
+end of program
+>>>Raise Exception:
+
+x=int(input('enter number:'))
+if x%2!=0:
+    raise Exception('x should be even')
+else:
+    print('x is even')
+o/p:
+enter number:99
+Traceback (most recent call last):
+  File "C:/Users/PC-57/Desktop/4M1/Day6-programs.py", line 25, in <module>
+    raise Exception('x should be even')
+Exception: x should be even
+
+>>>oops
+>>>classand object
+ex:
+class computer:
+    def config(self):
+        print('yes')
+lenova=computer()
+lenova.config()
+dell=computer()
+dell.config()
+ ex:2
+class employee:
+    def __init__(self,name,id):
+        self.id=id
+        self.name=name
+    def display(self):
+        print('ID: %d \nName:%s'% (self.id,self.name))
+emp1=employee("jhon",101)
+emp2=employee("zaka",102)
+emp1.display()
+emp2.display()
+o/p:
+ID: 101 
+Name:jhon
+ID: 102 
+Name:zaka
+
+ex2:
+class computer:
+    a=10
+    b=20
+    print('class variable i9nside class ',a)
+    def config(self):
+        c=100
+        print('yes')
+        print(' instance access',self.b)
+lenova=computer()
+print(lenova.a+lenova.b)
+lenova.config()
+dell=computer()
+dell.config()
+o/p:
+class variable i9nside class  10
+30
+yes
+ instance access 20
+yes
+ instance access 20
+
+
+
+
+
+    
