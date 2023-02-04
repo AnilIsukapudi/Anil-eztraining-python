@@ -1,0 +1,180 @@
+modules:
+>>>random module
+programs:
+
+import random as r
+x='hello world'
+print(r.sample(x,2))
+
+a=[1,2,3,4,5,6]
+r.shuffle(a)
+print(a)
+
+a=[1,2,3,4,5,6]
+print(r.choice(a))
+
+b='welcome to python'
+print(r.choice(b))
+
+a=r.random()
+print(a) #will return random number between 0.0 and 1.0
+print(r.randint(20,30))
+
+a=[10,20,30,40,50]
+print(r.choices(a,k=10))
+
+s='hello hi'
+print(r.choices(s,k=3))
+
+print(r.uniform(5,10))
+A=dir(r) # to get the functions of random module
+print(A)
+o/p:
+['BPF', 'LOG4', 'NV_MAGICCONST', 'RECIP_BPF', 'Random', 'SG_MAGICCONST', 'SystemRandom', 'TWOPI', '_ONE', '_Sequence', '_Set', '__all__', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', '_accumulate', '_acos', '_bisect', '_ceil', '_cos', '_e', '_exp', '_floor', '_index', '_inst', '_isfinite', '_log', '_os', '_pi', '_random', '_repeat', '_sha512', '_sin', '_sqrt', '_test', '_test_generator', '_urandom', '_warn', 'betavariate', 'choice', 'choices', 'expovariate', 'gammavariate', 'gauss', 'getrandbits', 'getstate', 'lognormvariate', 'normalvariate', 'paretovariate', 'randbytes', 'randint', 'random', 'randrange', 'sample', 'seed', 'setstate', 'shuffle', 'triangular', 'uniform', 'vonmisesvariate', 'weibullvariate']
+
+>>>calendar module
+ex:
+import calendar
+print('full calendar')
+print(calendar.calendar(2023))
+
+print('calendarof particular month')
+print(calendar.month(2023,2))
+
+print('set first day of the week')
+calendar.setfirstweekday(calendar.FRIDAY)
+print(calendar.month(2023,3))
+
+>>>datetime module
+import datetime
+a=datetime.datetime.now()
+print(a)
+sv=a.strftime("%y")
+fv=a.strftime("%y")
+print('year short version',sv)
+print('year full version',fv)
+z=dir(datetime)
+
+>>>functions:
+1)predefined functions
+2)userdefined functions
+Different types:
+1)without arugument and without return value
+ex:
+def multi():
+    n1=int(input("enter number"))
+    n2=int(input("enter number"))
+    n3=int(input("enter number"))
+    print(n1*n2*n3)
+multi()
+o/p:
+enter number10
+enter number22
+enter number33
+7260
+2)without argumrnts and with return value
+ex:
+def multi():
+    n1=int(input("enter number"))
+    n2=int(input("enter number"))
+    n3=int(input("enter number"))
+    return(n1*n2*n3)
+res=multi()
+print(res)
+o/p:
+enter number10
+enter number12
+enter number3
+360
+3)with argument and without return value
+def multi(n1,n2,n3):
+    print(n1*n2*n3)
+multi(4,5,6)
+o/p:120
+#user input
+def multi1(a,b,c):
+    print(a*b*c)
+n1=int(input("enter number"))
+n2=int(input("enter number"))
+n3=int(input("enter number"))
+multi1(n1,n2,n3)
+o/p:
+enter number1
+enter number2
+enter number3
+6
+4)with argument and with return value
+def multi(n1,n2,n3):
+    return(n1*n2*n3)
+res=multi(4,5,6)
+print(res)
+o/p:120
+#user input
+def multi1(a,b,c):
+    return(a*b*c)
+n1=int(input("enter number"))
+n2=int(input("enter number"))
+n3=int(input("enter number"))
+res=multi1(n1,n2,n3)
+print(res)
+o/p:
+enter number4
+enter number5
+enter number6
+120
+
+#sum of digits
+def digits(n):
+    sum=0
+    while n!=0:
+     rem=n%10   
+     sum+=rem
+     n=n//10
+    return(sum)
+n=int(input('enter a number:'))
+res=digits(n)
+print(res)
+ o/p:
+enter a number:321
+6
+
+
+>>>lemons program
+def lemons():
+    x=int(input("enter no.of lemons u have:"))
+    if x>21:
+        print("excess lemons:",x-21)
+    elif x<21:
+        print("required lemons:",21-x)
+    else:
+        print('you have 21 lemons')
+lemons()
+>>>recursive function
+def display():
+    n=int(input('enter a number:'))
+    if n%2==0:
+        display()
+    else :
+        print('over')
+display()
+o/p:
+enter a number:2
+enter a number:6
+enter a number:8
+enter a number:80
+enter a number:10
+enter a number:3
+over
+
+#factorial using recursive function
+def fact(n):
+    if n==0:
+        return 1
+    return n*fact(n-1)
+n=int(input('enter a number:'))
+res=fact(n)
+print(res)
+o/p:
+enter a number:5
+120
+
